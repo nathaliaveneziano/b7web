@@ -1,36 +1,31 @@
 import React from 'react';
-// Quando utilizar CSS, deve ser feita a importação do aquivo dessa forma
-// import './App.css';
+import styled from 'styled-components';
 
-function Avatar(props) {
-	return (
-		// Utilizando CSS
-		// <div className="avatar">
+// cria um componente já estilizado
+const Site = styled.div`
+	width: 400px;
+	height: 400px;
+	background: #00ff00;
+`;
 
-		// Utilizando StyleSheet
-		// deve ser colocado um para cada elemento
-		<div style={{ backgroundColor: '#FF0000', padding: 20, width: 150 }}>
-			<img
-				style={{ width: 50, height: 50 }}
-				src={props.user.url}
-				alt={props.user.name}
-			/>
-			<br />
-			<span>{props.user.name}</span>
-		</div>
-	);
-}
+const Title = styled.h1`
+	color: #ff0000;
+	font-size: 18px;
+`;
 
+const Botao = styled.button`
+	font-size: 19px;
+	padding: 10px 15px;
+`;
+
+// Para utilizar StuledComponents, devemos instalar através do comando
+// npm install styled-components --save
 function App() {
-	let user = {
-		url: 'http://www.google.com.br/google.jpg',
-		name: 'Nathália Veneziano',
-	};
-
 	return (
-		<>
-			<Avatar user={user} />
-		</>
+		<Site>
+			<Title>Título bem legal</Title>
+			<Botao>Clique aqui</Botao>
+		</Site>
 	);
 }
 
