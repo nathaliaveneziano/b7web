@@ -11,19 +11,7 @@ const Input = styled.input`
 
 function App() {
 	const [email, setEmail] = useState('');
-	const [password, setPassword] = useState('');
-
-	// const handleEmailChange = (e) => {
-	// 	setEmail(e.target.value);
-	// };
-
-	// const handlePasswordChange = (e) => {
-	// 	setPassword(e.target.value);
-	// };
-
-	const handleButton = () => {
-		alert(`${email} - ${password}`);
-	};
+	const [isLogged, setIsLogged] = useState(false);
 
 	return (
 		<>
@@ -31,17 +19,22 @@ function App() {
 				placeholder="Digite um e-mail"
 				type="email"
 				value={email}
-				// onChange={handleEmailChange}
 				onChange={(e) => setEmail(e.target.value)}
 			/>
-			<Input
-				placeholder="Digite uma senha"
-				type="password"
-				value={password}
-				// onChange={handlePasswordChange}
-				onChange={(e) => setPassword(e.target.value)}
-			/>
-			<button onClick={handleButton}>Dizer</button>
+
+			{/* Renderização Condicional */}
+			{/* Quando a condição for verdadeira, será mostrado */}
+			{email.length > 0 && (
+				<p>
+					{/* IF ternário na condição */}
+					{email.length} caractere{email.length > 0 ? 's' : ''}
+				</p>
+			)}
+
+			{isLogged
+        ? <button>Sair</button>
+        : <button>Fazer Login</button>
+      }
 		</>
 	);
 }
