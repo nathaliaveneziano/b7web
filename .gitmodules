@@ -1,0 +1,3 @@
+[submodule "reactjs/b7web-calculadora-gorjeta"]
+	path = reactjs/b7web-calculadora-gorjeta
+	url = git@github.com:nathaliaveneziano/b7web-tips-calculator.git
