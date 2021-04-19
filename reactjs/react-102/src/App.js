@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
 import SearchBox from './components/SearchBox';
 
 function App() {
-	const [searchText, setSearchText] = useState('');
 	const [list, setList] = useState([]);
 
 	useEffect(() => {
@@ -14,21 +12,39 @@ function App() {
 		]);
 	}, []);
 
-	const handleSearchInput = (novoTexto) => {
-		setSearchText(novoTexto);
-	};
+	function addAction(newItem) {
+		// Essa lógica não endente que o array foi atualizado, pois é uma atribuição do array
+		/* let newlist = list;
+
+		newlist.push({
+			title: newItem,
+			done: false,
+		});
+
+		setList(newlist); */
+
+		// Já nessa, ele entende que é um novo array e renderiza a lista
+		
+		// forma direta
+		// let newlist = [...list, { title: newItem, done: false }];
+
+		// forma mais descritiva
+		let newlist = [...list];
+		newlist.push({
+			title: newItem,
+			done: false,
+		});
+
+		setList(newlist);
+	}
 
 	return (
 		<>
 			<h1>Lista de Tarefas</h1>
-			<SearchBox
-				frasePadrao="Faça sua busca..."
-				onChangeText={handleSearchInput}
-			/>
+			<SearchBox frasePadrao="Adicione um item" onEnter={addAction} />
 			<hr />
 			<ul>
 				{list.map((item, index) => (
-					// toda vez que um elemento ou componente estiver num MAP, deve adicionar KEY
 					<li key={index}>
 						{item.done && <del>{item.title}</del>}
 						{!item.done && item.title}
