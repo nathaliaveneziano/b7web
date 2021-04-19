@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 const InputText = styled.input`
@@ -10,11 +10,22 @@ const InputText = styled.input`
 `;
 
 function SearchBox(props) {
-	return <InputText 
-    type="text"
-    // condicional mas com retorno positivo = &&
-    // condicional mas com retorno da negação = ??
-    placeholder={props.frasePadrao ?? 'Digite alguma coisa'} />;
+	const [texto, setTexto] = useState('');
+
+	useEffect(() => {
+    if(props.onChangeText) {
+      props.onChangeText(texto);
+    }
+	}, [texto]);
+
+	return (
+		<InputText
+			type="text"
+			value={texto}
+			onChange={(e) => setTexto(e.target.value)}
+			placeholder={props.frasePadrao ?? 'Digite alguma coisa'}
+		/>
+	);
 }
 
 export default SearchBox;
