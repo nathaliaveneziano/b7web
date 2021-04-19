@@ -1,8 +1,22 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, Link, Redirect } from 'react-router-dom';
-import Categoria from './pages/Categoria';
 import Home from './pages/Home';
+import Login from './pages/Login';
 import Sobre from './pages/Sobre';
+
+// Pertence a 1º forma de acesso a URL Privada
+const isLogged = false;
+
+// Pertence a 2º forma de acesso a URL Privada
+const PrivateRoute = ({ children, ...rest }) => {
+	return (
+		// Retorna todas as props incluídas na tag
+		<Route {...rest}>
+			{/* Adiciona o componente presente dentro da tag */}
+			{isLogged ? children : <Redirect to="/login" />}
+		</Route>
+	);
+};
 
 function App() {
 	return (
@@ -17,18 +31,6 @@ function App() {
 						<li>
 							<Link to="/sobre">Sobre</Link>
 						</li>
-						<li>
-							<Link to="/quem-somos">Quem Somos</Link>
-						</li>
-						<li>
-							<Link to="/categoria?tipo=esportes">Esportes</Link>
-						</li>
-						<li>
-							<Link to="/categoria?tipo=noticias">Notícias</Link>
-						</li>
-						<li>
-							<Link to="/categoria?tipo=viagem&subtipo=newyork">Viagem</Link>
-						</li>
 					</ul>
 				</nav>
 			</header>
@@ -39,17 +41,21 @@ function App() {
 				<Route exact path="/">
 					<Home />
 				</Route>
+
+				<Route path="/login">
+					<Login />
+				</Route>
+
+				{/* Uma forma de fazer a validação de acesso a URL
 				<Route path="/sobre">
+					{isLogged ? <Sobre /> : <Redirect to="/login" />}
+				</Route> */}
+
+				{/* Uma forma de fazer a validação de acesso a URL */}
+				<PrivateRoute path="/sobre">
 					<Sobre />
-				</Route>
-				<Route path="/quem-somos">
-					{/* Redireciona para a rota indicada */}
-					<Redirect to="/sobre" />
-				</Route>
-				<Route path="/categoria">
-					<Categoria />
-				</Route>
-				{/* Por isso, a última Rota deve ser a de erro */}
+				</PrivateRoute>
+
 				<Route path="*">
 					<h4>Página não encontrada!</h4>
 				</Route>
