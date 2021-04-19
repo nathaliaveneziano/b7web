@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import Home from './pages/Home';
+import Sobre from './pages/Sobre';
 
 function App() {
 	return (
@@ -17,6 +19,23 @@ function App() {
 					</ul>
 				</nav>
 			</header>
+			<hr/>
+
+			<Switch>
+				{/* Será feito o redirecionamento quando for EXATAMENTE /, senão, redireciona para outra do route ou ignora */}
+				<Route exact path="/">
+					<Home />
+				</Route>
+				{/* Rota para um componente */}
+				<Route path="/sobre">
+					<Sobre />
+				</Route>
+			</Switch>
+
+			<hr/>
+			<footer>
+				Todos os diretos resevados...
+			</footer>
 		</BrowserRouter>
 	);
 }
