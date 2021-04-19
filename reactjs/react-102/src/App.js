@@ -18,13 +18,15 @@ function App() {
 							<Link to="/sobre">Sobre</Link>
 						</li>
 						<li>
-							<Link to="/categoria/esportes">Esportes</Link>
+							{/* Query string com único parâmetro */}
+							<Link to="/categoria?tipo=esportes">Esportes</Link>
 						</li>
 						<li>
-							<Link to="/categoria/noticias">Notícias</Link>
+							<Link to="/categoria?tipo=noticias">Notícias</Link>
 						</li>
 						<li>
-							<Link to="/categoria/viagem">Viagem</Link>
+							{/* Query String com múltiplos parâmetros */}
+							<Link to="/categoria?tipo=viagem&subtipo=newyork">Viagem</Link>
 						</li>
 					</ul>
 				</nav>
@@ -38,8 +40,7 @@ function App() {
 				<Route path="/sobre">
 					<Sobre />
 				</Route>
-				{/* Quando temos subcategorias, o valor será armazenado dentro da variável, indicada pelo : */}
-				<Route path="/categoria/:cat">
+				<Route path="/categoria">
 					<Categoria />
 				</Route>
 			</Switch>
