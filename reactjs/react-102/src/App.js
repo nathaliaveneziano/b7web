@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import Categoria from './pages/Categoria';
 import Home from './pages/Home';
 import Sobre from './pages/Sobre';
 
@@ -16,19 +17,30 @@ function App() {
 						<li>
 							<Link to="/sobre">Sobre</Link>
 						</li>
+						<li>
+							<Link to="/categoria/esportes">Esportes</Link>
+						</li>
+						<li>
+							<Link to="/categoria/noticias">Notícias</Link>
+						</li>
+						<li>
+							<Link to="/categoria/viagem">Viagem</Link>
+						</li>
 					</ul>
 				</nav>
 			</header>
 			<hr/>
 
 			<Switch>
-				{/* Será feito o redirecionamento quando for EXATAMENTE /, senão, redireciona para outra do route ou ignora */}
 				<Route exact path="/">
 					<Home />
 				</Route>
-				{/* Rota para um componente */}
 				<Route path="/sobre">
 					<Sobre />
+				</Route>
+				{/* Quando temos subcategorias, o valor será armazenado dentro da variável, indicada pelo : */}
+				<Route path="/categoria/:cat">
+					<Categoria />
 				</Route>
 			</Switch>
 
