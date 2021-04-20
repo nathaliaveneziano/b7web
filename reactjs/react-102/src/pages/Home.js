@@ -1,9 +1,13 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { connect } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
-function Home(props) {
+function Home() {
 	let history = useHistory();
+	const dispatch = useDispatch();
+
+	const name = useSelector((state) => state.usuario.name);
+	const contador = useSelector((state) => state.usuario.contador);
 
 	const handleButton = () => {
 		setTimeout(() => {
@@ -12,19 +16,22 @@ function Home(props) {
 	};
 
 	const handleNathalia = () => {
-		props.setName('Nathália');
+		dispatch({
+			type: 'SET_NAME',
+			payload: { name: 'Nathália' },
+		});
 	};
 
 	const handleIncrement = () => {
-		props.increment();
+		dispatch({ type: 'INCREMENT_CONTADOR' });
 	};
 
 	return (
 		<div>
 			<h4>Página HOME</h4>
 
-			<p>Nome: {props.name}</p>
-			<p>Contagem: {props.contador}</p>
+			<p>Nome: {name}</p>
+			<p>Contagem: {contador}</p>
 
 			<p>
 				<button type="button" onClick={handleNathalia}>
@@ -44,20 +51,4 @@ function Home(props) {
 	);
 }
 
-const mapStateToProps = (state) => {
-	return {
-		name: state.usuario.name,
-		contador: state.usuario.contador,
-	};
-};
-
-const mapDispatchToProps = (dispatch) => {
-	return {
-		setName: (newName) =>
-			dispatch({ type: 'SET_NAME', payload: { name: newName } }),
-		increment: () => 
-			dispatch({ type: 'INCREMENT_CONTADOR' }),
-	};
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default Home;
