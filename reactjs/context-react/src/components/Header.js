@@ -1,12 +1,11 @@
-import { useContext } from 'react';
 import Botao from './Botao';
-import ThemeContext from '../contexts/ThemeContext';
+import { useStateValue } from '../contexts/StateContext';
 
 const Header = () => {
-	const theme = useContext(ThemeContext);
+	const context = useStateValue();
 
 	return (
-		<header className={`box theme-${theme}`}>
+		<header className={`box theme-${context.theme}`}>
 			<Botao />
 		</header>
 	);

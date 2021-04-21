@@ -1,16 +1,15 @@
-import { useContext } from 'react';
 import Botao from './Botao';
-import ThemeContext from '../contexts/ThemeContext';
+import { useStateValue } from '../contexts/StateContext';
 
 const Body = (props) => {
-	const theme = useContext(ThemeContext);
+	const context = useStateValue();
 
 	const handleButton = () => {
 		props.setUserName('Claudia');
 	};
 
 	return (
-		<article className={`box theme-${theme}`}>
+		<article className={`box theme-${context.theme}`}>
 			<Botao />
 			<button onClick={handleButton}>Trocar para Claudia</button>
 		</article>

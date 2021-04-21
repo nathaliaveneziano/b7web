@@ -1,12 +1,11 @@
-import { useContext } from 'react';
 import Botao from './Botao';
-import ThemeContext from '../contexts/ThemeContext';
+import { useStateValue } from '../contexts/StateContext';
 
 const Menu = () => {
-	const theme = useContext(ThemeContext);
+	const context = useStateValue();
 
 	return (
-		<aside className={`box theme-${theme}`}>
+		<aside className={`box theme-${context.theme}`}>
 			<Botao />
 		</aside>
 	);

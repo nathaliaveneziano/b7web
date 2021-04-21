@@ -1,15 +1,11 @@
-import { useContext } from 'react';
-
-import UserContext from '../contexts/UserContext';
-import ThemeContext from '../contexts/ThemeContext';
+import { useStateValue } from '../contexts/StateContext';
 
 const Botao = () => {
-	const theme = useContext(ThemeContext);
-	const user = useContext(UserContext);
+	const context = useStateValue();
 
 	return (
 		<button>
-			{user.name} - {theme}
+			{context.user.name} - {context.theme}
 		</button>
 	);
 };
