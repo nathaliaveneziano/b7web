@@ -13,7 +13,7 @@ function App() {
 	const [userEmail, setUserEmail] = useState('nath@test.com');
 
 	return (
-		<ThemeContext.Provider value="light">
+		<ThemeContext.Provider value="dark">
 			<UserContext.Provider value={{ name: userName, email: userEmail }}>
 				<div className="container">
 					<ThemeContext.Consumer>

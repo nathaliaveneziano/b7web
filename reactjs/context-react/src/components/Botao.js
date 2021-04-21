@@ -1,18 +1,17 @@
+import { useContext } from 'react';
+
 import UserContext from '../contexts/UserContext';
 import ThemeContext from '../contexts/ThemeContext';
 
-const Botao = () => (
-	<UserContext.Consumer>
-		{(value) => (
-			<ThemeContext.Consumer>
-				{(themeValue) => (
-					<button>
-						{value.name} - {themeValue}
-					</button>
-				)}
-			</ThemeContext.Consumer>
-		)}
-	</UserContext.Consumer>
-);
+const Botao = () => {
+	const theme = useContext(ThemeContext);
+	const user = useContext(UserContext);
+
+	return (
+		<button>
+			{user.name} - {theme}
+		</button>
+	);
+};
 
 export default Botao;

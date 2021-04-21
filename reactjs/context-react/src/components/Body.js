@@ -1,20 +1,19 @@
+import { useContext } from 'react';
 import Botao from './Botao';
 import ThemeContext from '../contexts/ThemeContext';
 
 const Body = (props) => {
+	const theme = useContext(ThemeContext);
+
 	const handleButton = () => {
 		props.setUserName('Claudia');
 	};
 
 	return (
-		<ThemeContext.Consumer>
-			{(value) => (
-				<article className={`box theme-${value}`}>
-					<Botao />
-					<button onClick={handleButton}>Trocar para Claudia</button>
-				</article>
-			)}
-		</ThemeContext.Consumer>
+		<article className={`box theme-${theme}`}>
+			<Botao />
+			<button onClick={handleButton}>Trocar para Claudia</button>
+		</article>
 	);
 };
 
