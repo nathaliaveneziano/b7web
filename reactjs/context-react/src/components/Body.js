@@ -1,4 +1,5 @@
 import Botao from './Botao';
+import ThemeContext from '../contexts/ThemeContext';
 
 const Body = (props) => {
 	const handleButton = () => {
@@ -6,10 +7,14 @@ const Body = (props) => {
 	};
 
 	return (
-		<article className="box">
-			<Botao username={props.username} />
-			<button onClick={handleButton}>Trocar para Claudia</button>
-		</article>
+		<ThemeContext.Consumer>
+			{(value) => (
+				<article className={`box theme-${value}`}>
+					<Botao username={props.username} />
+					<button onClick={handleButton}>Trocar para Claudia</button>
+				</article>
+			)}
+		</ThemeContext.Consumer>
 	);
 };
 

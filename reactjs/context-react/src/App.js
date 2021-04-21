@@ -11,8 +11,11 @@ function App() {
 	const [userName, setUserName] = useState('Nathália');
 
 	return (
-		<ThemeContext.Provider value="light">
+		<ThemeContext.Provider value="dark">
 			<div className="container">
+				<ThemeContext.Consumer>
+					{(value) => <p>Tema: {value}</p>}
+				</ThemeContext.Consumer>
 				<Header username={userName} />
 				<section>
 					<Menu username={userName} />

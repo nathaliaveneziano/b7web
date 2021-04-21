@@ -1,9 +1,14 @@
 import Botao from './Botao';
+import ThemeContext from '../contexts/ThemeContext';
 
 const Header = (props) => (
-	<header className="box">
-		<Botao username={props.username} />
-	</header>
+	<ThemeContext.Consumer>
+		{(value) => (
+			<header className={`box theme-${value}`}>
+				<Botao username={props.username} />
+			</header>
+		)}
+	</ThemeContext.Consumer>
 );
 
 export default Header;
