@@ -10,7 +10,7 @@ const Body = (props) => {
 		<ThemeContext.Consumer>
 			{(value) => (
 				<article className={`box theme-${value}`}>
-					<Botao username={props.username} />
+					<Botao />
 					<button onClick={handleButton}>Trocar para Claudia</button>
 				</article>
 			)}

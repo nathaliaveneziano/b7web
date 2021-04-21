@@ -1,11 +1,11 @@
 import Botao from './Botao';
 import ThemeContext from '../contexts/ThemeContext';
 
-const Header = (props) => (
+const Header = () => (
 	<ThemeContext.Consumer>
 		{(value) => (
 			<header className={`box theme-${value}`}>
-				<Botao username={props.username} />
+				<Botao />
 			</header>
 		)}
 	</ThemeContext.Consumer>
