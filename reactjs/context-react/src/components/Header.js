@@ -1,12 +1,19 @@
-import Botao from './Botao';
 import { useStateValue } from '../contexts/StateContext';
 
 const Header = () => {
-	const context = useStateValue();
+	const [state, dispatch] = useStateValue();
 
 	return (
-		<header className={`box theme-${context.theme}`}>
-			<Botao />
+		<header className={`box theme-${state.theme}`}>
+			{state.theme === 'light' ? (
+				<button onClick={() => dispatch({ type: 'setTheme', theme: 'dark' })}>
+					Dark
+				</button>
+			) : (
+				<button onClick={() => dispatch({ type: 'setTheme', theme: 'light' })}>
+					Light
+				</button>
+			)}
 		</header>
 	);
 };

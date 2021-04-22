@@ -1,11 +1,11 @@
 import { useStateValue } from '../contexts/StateContext';
 
 const Botao = () => {
-	const context = useStateValue();
+	const [state, dispatch] = useStateValue();
 
 	return (
 		<button>
-			{context.user.name} - {context.theme}
+			{state.user.name} - {state.theme}
 		</button>
 	);
 };

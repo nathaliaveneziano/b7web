@@ -2,10 +2,10 @@ import Botao from './Botao';
 import { useStateValue } from '../contexts/StateContext';
 
 const Menu = () => {
-	const context = useStateValue();
+	const [state, dispatch] = useStateValue();
 
 	return (
-		<aside className={`box theme-${context.theme}`}>
+		<aside className={`box theme-${state.theme}`}>
 			<Botao />
 		</aside>
 	);

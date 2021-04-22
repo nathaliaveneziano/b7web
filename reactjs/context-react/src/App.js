@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './App.css';
 
 import { StateProvider } from './contexts/StateContext';
@@ -8,19 +7,8 @@ import Menu from './components/Menu';
 import Body from './components/Body';
 
 function App() {
-	const [userName, setUserName] = useState('Nathália');
-	const [userEmail, setUserEmail] = useState('nath@test.com');
-
-	let providerValue = {
-		theme: 'dark',
-		user: {
-			name: userName,
-			email: userEmail,
-		},
-	};
-
 	return (
-		<StateProvider value={providerValue}>
+		<StateProvider>
 			<div className="container">
 				{/* <ThemeContext.Consumer>
 					{(value) => <p>Tema: {value}</p>}
@@ -28,7 +16,7 @@ function App() {
 				<Header />
 				<section>
 					<Menu />
-					<Body setUserName={setUserName} />
+					<Body />
 				</section>
 			</div>
 		</StateProvider>
