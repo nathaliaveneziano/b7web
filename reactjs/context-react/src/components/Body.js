@@ -1,4 +1,5 @@
 import Botao from './Botao';
+import Contagem from './Contagem';
 import { useStateValue } from '../contexts/StateContext';
 
 const Body = (props) => {
@@ -12,6 +13,8 @@ const Body = (props) => {
 		<article className={`box theme-${context.theme}`}>
 			<Botao />
 			<button onClick={handleButton}>Trocar para Claudia</button>
+			<hr/>
+			<Contagem />
 		</article>
 	);
 };
