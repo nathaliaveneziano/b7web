@@ -5,17 +5,19 @@ import { useStateValue } from '../contexts/StateContext';
 const Body = () => {
 	const [state, dispatch] = useStateValue();
 
-	const handleButton = () => {
+	const handleButton = (name) => {
 		dispatch({
 			type: 'setName',
-			name: 'Claudia',
+			name,
 		});
 	};
+
+	const changeName = state.user.name === 'Nathália' ? 'Claudia' : 'Nathália';
 
 	return (
 		<article className={`box theme-${state.theme}`}>
 			<Botao />
-			<button onClick={handleButton}>Trocar para Claudia</button>
+			<button onClick={() => handleButton(changeName)}>Trocar para {changeName}</button>
 			<hr />
 			<Contagem />
 		</article>

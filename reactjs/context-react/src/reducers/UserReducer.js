@@ -1,6 +1,6 @@
 const initialState = {
-	name: 'Visitante',
-	email: 'visitante@example.com',
+	name: 'Nathália',
+	email: 'nath@example.com',
 };
 
 const userReducer = (state = initialState, action = {}) => {
