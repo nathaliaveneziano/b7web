@@ -3,9 +3,12 @@ body {
 }
 
 .texto {
-  width: 500px;
-  height: 200px;
+  width: 700px;
+  height: 500px;
   background-color: #eeeeee;
+  margin: auto;
+  margin-top: 20px;
+  padding-top: 20px;
 
   color: #ff0000;
   font-size: 20px;
