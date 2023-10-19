@@ -10,3 +10,15 @@ h1 {
 img {
   width: 200px;
 }
+
+#titulo {
+  font-size: 12px;
+}
+
+.teste {
+  width: 500px;
+}
+
+.teste2 {
+  background-color: #ffff00;
+}
