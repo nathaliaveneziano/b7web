@@ -4,11 +4,14 @@ body {
 
 .texto {
   width: 300px;
-  height: 1000px;
+  height: 100px;
   background-color: #eeeeee;
-  margin: auto;
-  margin-top: 20px;
-  padding-top: 20px;
+  margin-bottom: 10px;
+
+  /* block = deixa o elemento como bloco (tipo div) */
+  /* inline = deixa o elemento como linha (tipo span) */
+  /* inline-block = mescla os dois elementos */
+  display: block;
 
   color: #ff0000;
   font-size: 20px;
@@ -16,15 +19,4 @@ body {
   font-weight: bold;
   text-align: center;
   text-decoration: underline;
-}
-
-.flutuante {
-  /* absolute = sobreposta as outras */
-  /* fixed = fixo na posicao */
-  height: 100px;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  background-color: #ff0000;
-  color: #eeeeee;
 }
