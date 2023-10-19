@@ -3,52 +3,29 @@
     <title>Título da sua página</title>
   </head>
   <body>
-    <table width="500" border="1">
-      <tr>
-        <td>Nome</td>
-        <td width="60">Idade</td>
-        <td>Cidade</td>
-      </tr>
-      <tr>
-        <td>Nathália</td>
-        <td>40</td>
-        <td width="100">Santos</td>
-      </tr>
-      <tr>
-        <td>Teste</td>
-        <td colspan="2">100</td>
-      </tr>
-    </table>
+    <form method="post">
+      Usuário: <br />
+      <input type="text" name="usuario" /><br /><br />
 
-    <br /><br />
+      Senha: <br />
+      <input type="password" name="senha" /><br /><br />
 
-    <table width="500" border="1">
-      <tr bgcolor="#999999">
-        <td>Imagem</td>
-        <td>Produto</td>
-        <td width="60" align="center">Qtd.</td>
-        <td>Preço</td>
-      </tr>
-      <tr>
-        <td>
-          <img src="http://www.google.com.br/google.jpg" width="50" alt="" />
-        </td>
-        <td>Pedra</td>
-        <td>2</td>
-        <td width="100">150</td>
-      </tr>
-      <tr>
-        <td>
-          <img src="http://www.google.com.br/google.jpg" width="50" alt="" />
-        </td>
-        <td>Papel</td>
-        <td>2</td>
-        <td width="100">100</td>
-      </tr>
-      <tr bgcolor="#999999">
-        <td colspan="3" align="right">Subtotal</td>
-        <td>250</td>
-      </tr>
-    </table>
+      <!-- <input type="checkbox" name="" /> -->
+
+      <textarea name="campo" cols="30" rows="10"></textarea><br /><br />
+
+      <select name="opcoes">
+        <option value="1">Campo 1</option>
+        <option value="2">Campo 2</option>
+        <option value="3">Campo 3</option>
+      </select>
+      <br /><br />
+
+      <input type="radio" name="radio" value="1" /> Opção 1
+      <input type="radio" name="radio" value="2" /> Opção 2
+      <input type="radio" name="radio" value="3" /> Opção 3<br /><br />
+
+      <input type="submit" value="Enviar" />
+    </form>
   </body>
 </html>
