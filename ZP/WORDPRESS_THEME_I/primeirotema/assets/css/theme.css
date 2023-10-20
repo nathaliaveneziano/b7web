@@ -16,3 +16,19 @@ body {
 .main-menu a {
   color: #fff;
 }
+
+.site {
+  display: flex;
+}
+
+.container {
+  width: 70%;
+}
+
+.sidebar {
+  width: 30%;
+}
+
+.widget-title {
+  color: #00f;
+}

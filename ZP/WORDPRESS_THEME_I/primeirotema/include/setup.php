@@ -16,3 +16,18 @@ function nv_after_setup_theme()
   register_nav_menu('primary', __('Primary Menu', 'primeirotema'));
   register_nav_menu('footer', __('Footer Menu', 'primeirotema'));
 }
+
+function nv_widgets()
+{
+  register_sidebar(array(
+    'name' => __('Meu  Primeiro Sidebar', 'primeirotema'),
+    'id' => 'nv_sidebar',
+    'description' => __('Sidebar para o tema', 'primeirotema'),
+
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+
+    'before_title' => '<h4 class="widget-title">',
+    'after_title' => '</h4>',
+  ));
+}
