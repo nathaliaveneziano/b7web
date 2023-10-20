@@ -40,7 +40,7 @@ body {
   margin-bottom: 10px;
 }
 
-body:not(.single):not(.single-post) .post {
+body:is(.home) .post {
   display: flex;
 }
 
