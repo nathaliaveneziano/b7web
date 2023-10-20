@@ -31,7 +31,6 @@
       <div class="pagination">
         <?php previous_posts_link(); ?>
         <?php next_posts_link(); ?>
-        <!-- <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a> -->
       </div>
     </div>
   </div>

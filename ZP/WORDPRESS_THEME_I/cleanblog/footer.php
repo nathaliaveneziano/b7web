@@ -29,12 +29,12 @@
               </a>
             </li>
           </ul>
-          <p class="copyright text-muted">Copyright &copy; Your Website 2017</p>
+          <p class="copyright text-muted">Copyright &copy; <?php bloginfo('name'); ?> - 2023</p>
         </div>
       </div>
     </div>
   </footer>
   <?php wp_footer(); ?>
-</body>
+  </body>
 
-</html>
+  </html>
