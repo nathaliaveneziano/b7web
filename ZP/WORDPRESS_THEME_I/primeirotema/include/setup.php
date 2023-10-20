@@ -17,6 +17,8 @@ function nv_after_setup_theme()
   register_nav_menu('footer', __('Footer Menu', 'primeirotema'));
 
   add_theme_support('post-thumbnails');
+  add_theme_support('title-tag');
+  add_theme_support('custom-logo');
 }
 
 function nv_widgets()
