@@ -22,6 +22,15 @@ function nv_afterr_setup()
 
 function nv_widgets()
 {
+  register_sidebar(array(
+    'name' => __('Sidebar Lateral', 'minimag'),
+    'id' => 'nv_sidebar',
+    'description' => __('Sidebar Lateral', 'minimag'),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4 class="widget_title">',
+    'after_title' => '</h4>',
+  ));
 }
 
 function nv_add_additional_class_on_li($classes, $item, $args)
