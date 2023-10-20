@@ -1,9 +1,15 @@
 <?php
+
+/**
+ * Template Name: Modelo full
+ * Template Post Type: post
+ */
+
 get_header();
 ?>
 
 <section class="site">
-  <div class="container">
+  <div class="container full">
     <?php if (have_posts()) : ?>
       <?php while (have_posts()) : ?>
         <?php the_post(); ?>
@@ -42,8 +48,6 @@ get_header();
       <div class="next"><?php next_post_link(); ?></div>
     </div>
   </div>
-
-  <?php get_sidebar(); ?>
 </section>
 
 <?php

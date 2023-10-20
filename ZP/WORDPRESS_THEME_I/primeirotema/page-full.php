@@ -1,9 +1,16 @@
 <?php
+
+/**
+ * Template Name: Modelo full
+ */
+?>
+
+<?php
 get_header();
 ?>
 
 <section class="site">
-  <div class="container">
+  <div class="container full">
     <?php while (have_posts()) : ?>
       <?php the_post(); ?>
       <article class="post">
@@ -29,8 +36,6 @@ get_header();
       </article>
     <?php endwhile; ?>
   </div>
-
-  <?php get_sidebar(); ?>
 </section>
 
 <?php

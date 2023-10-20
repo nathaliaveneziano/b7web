@@ -25,6 +25,10 @@ body {
   width: 70%;
 }
 
+.full {
+  width: 100%;
+}
+
 .sidebar {
   width: 30%;
 }
