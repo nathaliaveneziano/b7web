@@ -9,31 +9,33 @@
 
 <body <?php body_class(); ?>>
   <header>
-    <div class="top-header">
-      <nav class="navbar navbar-expand-md">
-        <div class="container">
-          <div class="navbar-header">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+    <?php if (get_theme_mod('nv_topmenu_show')) : ?>
+      <div class="top-header">
+        <nav class="navbar navbar-expand-md">
+          <div class="container">
+            <div class="navbar-header">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <?php
+              if (has_nav_menu('top')) {
+                wp_nav_menu(array(
+                  'theme_location'  => 'top',
+                  'container'       => false,
+                  'fallback_cb'     => false,
+                  'menu_class'      => 'navbar-nav',
+                  'add_li_class'    => 'nav-item',
+                  'add_a_class'     => 'nav-link',
+                ));
+              }
+              ?>
+            </div>
           </div>
-          <div class="collapse navbar-collapse" id="navbar">
-            <?php
-            if (has_nav_menu('top')) {
-              wp_nav_menu(array(
-                'theme_location'  => 'top',
-                'container'       => false,
-                'fallback_cb'     => false,
-                'menu_class'      => 'navbar-nav',
-                'add_li_class'    => 'nav-item',
-                'add_a_class'     => 'nav-link',
-              ));
-            }
-            ?>
-          </div>
-        </div>
-      </nav>
-    </div>
+        </nav>
+      </div>
+    <?php endif; ?>
     <div class="main-header">
       <div class="container">
         <div class="logo">
@@ -61,7 +63,11 @@
             }
             ?>
             <div class="search-area">
-              <?php get_search_form(); ?>
+              <?php
+              if (get_theme_mod('nv_search_show')) {
+                get_search_form();
+              }
+              ?>
             </div>
           </div>
           <div class="main-info">
