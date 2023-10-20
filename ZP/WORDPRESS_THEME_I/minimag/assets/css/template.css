@@ -284,13 +284,32 @@ main {
   margin-bottom: 62px;
 }
 
-.main,
-.single-page {
+main .col-sm-8 {
   padding: 0;
   background-color: #fff;
+  padding: 0 12px;
+}
+
+.main,
+.single-page {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 12px;
+  /* align-items: flex-start; */
+}
+
+/* MAIN HEADER POST */
+.main-header-title {
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 3% 12px;
+}
+
+.main-header-title p {
+  margin-bottom: 0;
+}
+
+.main-header-title span {
+  color: #3b8dbd;
 }
 
 /* POST */

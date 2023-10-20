@@ -16,12 +16,12 @@
             <?php
             if (has_nav_menu('top')) {
               wp_nav_menu(array(
-                'theme_location' => 'top',
-                'container' => false,
-                'fallback_cb' => false,
-                'menu_class' => 'navbar-nav',
-                'add_li_class' => 'nav-item',
-                'add_a_class' => 'nav-link',
+                'theme_location'  => 'top',
+                'container'       => false,
+                'fallback_cb'     => false,
+                'menu_class'      => 'navbar-nav',
+                'add_li_class'    => 'nav-item',
+                'add_a_class'     => 'nav-link',
               ));
             }
             ?>
@@ -46,12 +46,12 @@
             <?php
             if (has_nav_menu('primary')) {
               wp_nav_menu(array(
-                'theme_location' => 'primary',
-                'container' => false,
-                'fallback_cb' => false,
-                'menu_class' => 'navbar-nav',
-                'add_li_class' => 'nav-item',
-                'add_a_class' => 'nav-link',
+                'theme_location'  => 'primary',
+                'container'       => false,
+                'fallback_cb'     => false,
+                'menu_class'      => 'navbar-nav',
+                'add_li_class'    => 'nav-item',
+                'add_a_class'     => 'nav-link',
               ));
             }
             ?>
@@ -65,10 +65,10 @@
                 <strong>WHAT'S NEW?</strong>
                 <?php
                 $nv_query = new WP_Query(array(
-                  'posts_per_page' => 1,
-                  'post_type' => 'post',
-                  'orderby' => 'rand',
-                  'post_status' => 'publish',
+                  'posts_per_page'  => 1,
+                  'post_type'       => 'post',
+                  'orderby'         => 'rand',
+                  'post_status'     => 'publish',
                 ));
 
                 if ($nv_query->have_posts()) :

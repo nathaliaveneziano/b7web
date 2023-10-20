@@ -4,6 +4,9 @@
   <div class="container">
     <div class="row">
       <section class="col-sm-8">
+        <header class="main-header-title">
+          <h1><?= __('Search: ', 'minimag'); ?><span><?= get_search_query(); ?></span></h1>
+        </header>
         <div class="main">
           <?php
           if (have_posts()) :
