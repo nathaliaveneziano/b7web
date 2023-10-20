@@ -86,8 +86,8 @@ body {
   -webkit-tap-highlight-color: #0085a1;
 }
 
-body.admin-bar nav {
-  margin-top: 32px;
+body.logged-in nav {
+  top: 32px;
 }
 
 #mainNav {
@@ -107,7 +107,7 @@ body.admin-bar nav {
   text-transform: uppercase;
   color: #343a40;
 }
-#mainNav .navbar-nav > li.menu-item > a {
+#mainNav .navbar-nav > li.nav-item > a {
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 1px;
@@ -126,12 +126,12 @@ body.admin-bar nav {
   #mainNav .navbar-brand:hover {
     color: rgba(255, 255, 255, 0.8);
   }
-  #mainNav .navbar-nav > li.menu-item > a {
+  #mainNav .navbar-nav > li.nav-item > a {
     padding: 10px 20px;
     color: #fff;
   }
-  #mainNav .navbar-nav > li.menu-item > a:focus,
-  #mainNav .navbar-nav > li.menu-item > a:hover {
+  #mainNav .navbar-nav > li.nav-item > a:focus,
+  #mainNav .navbar-nav > li.nav-item > a:hover {
     color: rgba(255, 255, 255, 0.8);
   }
 }
@@ -165,11 +165,11 @@ body.admin-bar nav {
   #mainNav.is-fixed .navbar-brand:hover {
     color: #0085a1;
   }
-  #mainNav.is-fixed .navbar-nav > li.menu-item > a {
+  #mainNav.is-fixed .navbar-nav > li.nav-item > a {
     color: #212529;
   }
-  #mainNav.is-fixed .navbar-nav > li.menu-item > a:focus,
-  #mainNav.is-fixed .navbar-nav > li.menu-item > a:hover {
+  #mainNav.is-fixed .navbar-nav > li.nav-item > a:focus,
+  #mainNav.is-fixed .navbar-nav > li.nav-item > a:hover {
     color: #0085a1;
   }
   #mainNav.is-visible {
@@ -382,18 +382,7 @@ footer .copyright {
   text-align: center;
 }
 
-.pagination {
-  display: flex;
-  justify-content: space-between;
-}
-
-.pagination a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.btn,
-.pagination a {
+.btn {
   font-size: 14px;
   font-weight: 800;
   padding: 15px 25px;
@@ -403,17 +392,13 @@ footer .copyright {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.btn-primary,
-.pagination a {
+.btn-primary {
   background-color: #0085a1;
   border-color: #0085a1;
 }
 .btn-primary:hover,
 .btn-primary:focus,
-.btn-primary:active,
-.pagination a:hover,
-.pagination a:focus,
-.pagination a:active {
+.btn-primary:active {
   color: #fff;
   background-color: #00657b !important;
   border-color: #00657b !important;
