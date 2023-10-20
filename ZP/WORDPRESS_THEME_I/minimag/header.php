@@ -10,7 +10,7 @@
 <body <?php body_class(); ?>>
   <header>
     <div class="top-header">
-      <nav class="navbar navbar-expand-lg">
+      <nav class="navbar navbar-expand-md">
         <div class="container">
           <div class="collapse navbar-collapse">
             <?php
@@ -100,4 +100,3 @@
       </div>
     </div>
   </header>
-  

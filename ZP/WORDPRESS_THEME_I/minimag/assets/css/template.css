@@ -614,3 +614,19 @@ aside .widget .widget_title {
 .footer-credits .back-to-top img {
   height: 20px;
 }
+
+/* MEDIA QUERIES */
+/* tablet horizontal ou monitor menor */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* tablet vertical */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+}
+
+/* tablet vertical */
+@media screen and (max-width: 480px) {
+  .footer-widgets {
+    flex-direction: column;
+  }
+}
