@@ -16,10 +16,26 @@ function nv_afterr_setup()
   add_theme_support('title-tag');
   add_theme_support('custom-logo');
 
-  register_nav_menu('primary', __('Menu Prrimcipal', 'minimag'));
+  register_nav_menu('primary', __('Menu Principal', 'minimag'));
   register_nav_menu('top', __('Menu Superior', 'minimag'));
 }
 
 function nv_widgets()
 {
+}
+
+function nv_add_additional_class_on_li($classes, $item, $args)
+{
+  if (isset($args->add_li_class)) {
+    $classes[] = $args->add_li_class;
+  }
+  return $classes;
+}
+
+function nv_add_additional_class_on_a($atts, $item, $args)
+{
+  if (property_exists($args, 'add_a_class')) {
+    $atts['class'] = $args->add_a_class;
+  }
+  return $atts;
 }
