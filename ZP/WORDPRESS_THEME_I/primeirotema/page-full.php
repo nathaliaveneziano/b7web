@@ -20,18 +20,18 @@ get_header();
           <?php the_post_thumbnail('full'); ?>
         <?php endif; ?>
 
-        <p><?php the_content(); ?></p>
-
         <?php if (comments_open()) : ?>
-
           <p>
             <?php comments_number(); ?>
           </p>
+        <?php endif; ?>
 
-          <hr>
+        <hr>
+
         <?php
+        if (comments_open()) {
           comments_template();
-        endif;
+        }
         ?>
       </article>
     <?php endwhile; ?>

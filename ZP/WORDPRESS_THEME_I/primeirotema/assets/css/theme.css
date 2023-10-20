@@ -67,6 +67,15 @@ body:is(.home, .archive) .post {
   margin-right: 10px;
 }
 
+.related-posts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.related-item {
+  width: 30%;
+}
+
 footer {
   margin-top: 50px;
 }

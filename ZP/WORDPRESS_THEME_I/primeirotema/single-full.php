@@ -29,15 +29,17 @@ get_header();
           <p><?php the_content(); ?></p>
 
           <?php if (comments_open()) : ?>
-
             <p>
               <?php comments_number(); ?>
             </p>
+          <?php endif; ?>
 
-            <hr>
+          <hr>
+
           <?php
+          if (comments_open()) {
             comments_template();
-          endif;
+          }
           ?>
         </article>
       <?php endwhile; ?>

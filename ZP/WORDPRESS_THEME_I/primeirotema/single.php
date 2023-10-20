@@ -23,15 +23,40 @@ get_header();
           <p><?php the_content(); ?></p>
 
           <?php if (comments_open()) : ?>
-
             <p>
               <?php comments_number(); ?>
             </p>
+          <?php endif; ?>
 
-            <hr>
+          <hr>
+
+          <h2>Posts Relacionados</h2>
+          <section class="related-posts">
+            <?php
+            $categories = get_the_category();
+
+            $nv_query = new WP_Query(array(
+              'posts_per_page' => 3,
+              'post__not_in' => array($post->ID),
+              'cat' => $categories[0]->term_id,
+            ));
+
+            if ($nv_query->have_posts()) {
+              while ($nv_query->have_posts()) {
+                $nv_query->the_post();
+                get_template_part('template-parts/related-post');
+              }
+
+              wp_reset_postdata();
+            }
+            ?>
+          </section>
+          <hr>
+
           <?php
+          if (comments_open()) {
             comments_template();
-          endif;
+          }
           ?>
         </article>
       <?php endwhile; ?>
