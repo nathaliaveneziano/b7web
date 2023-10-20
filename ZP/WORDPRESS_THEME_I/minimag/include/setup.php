@@ -24,8 +24,18 @@ function nv_widgets()
 {
   register_sidebar(array(
     'name' => __('Sidebar Lateral', 'minimag'),
-    'id' => 'nv_sidebar',
+    'id' => 'nv_sidebar_aside',
     'description' => __('Sidebar Lateral', 'minimag'),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4 class="widget_title">',
+    'after_title' => '</h4>',
+  ));
+
+  register_sidebar(array(
+    'name' => __('Sidebar Rodapé', 'minimag'),
+    'id' => 'nv_sidebar_footer',
+    'description' => __('Sidebar Rodapé', 'minimag'),
     'before_widget' => '<div id="%1$s" class="widget %2$s">',
     'after_widget' => '</div>',
     'before_title' => '<h4 class="widget_title">',

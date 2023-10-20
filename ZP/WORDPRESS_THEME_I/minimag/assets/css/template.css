@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  background-color: #eaeaea;
+  scroll-behavior: smooth;
 }
 
 body.admin-bar {
@@ -30,6 +32,45 @@ img {
 .row {
   margin: 0;
   height: 100%;
+}
+
+/* WIDGET POPULAR POSTS */
+.wp-block-latest-posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 0;
+}
+
+.wp-block-latest-posts a {
+  color: #444;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.wp-block-latest-posts a:hover {
+  color: #3b8dbd;
+}
+
+/* WIDGET TAG CLOUD */
+.wp-block-tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  margin-bottom: 0;
+}
+
+.wp-block-tag-cloud a {
+  padding: 5px 15px;
+  color: #fff;
+  background: rgb(158, 202, 78);
+  margin: 1px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.wp-block-tag-cloud a:hover {
+  background: rgba(158, 202, 78, 0.5);
 }
 
 /* TOP MENU */
@@ -234,4 +275,47 @@ aside .wp-block-tag-cloud a {
 
 aside .wp-block-tag-cloud a:hover {
   background: rgba(158, 202, 78, 0.5);
+}
+
+/* FOOTER */
+
+/* FOOTER WIDGETS */
+.footer-widgets {
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-widgets .widget {
+  width: 100%;
+  padding: 20px;
+}
+
+.footer-credits {
+  font-size: 80%;
+  background: #33363b;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 40px;
+  position: relative;
+}
+
+.footer-credits .back-to-top {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -45px;
+  width: 90px;
+  height: 30px;
+  border: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  cursor: pointer;
+}
+
+.footer-credits .back-to-top img {
+  height: 20px;
 }
