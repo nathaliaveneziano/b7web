@@ -4,8 +4,9 @@ get_header();
 
 <section class="site">
   <div class="container">
-    <?php get_search_form(); ?>
-    ...
+    <h1><?php the_archive_title(); ?></h1>
+    <p><?php the_archive_description(); ?></p>
+
     <?php if (have_posts()) : ?>
       <?php while (have_posts()) : ?>
         <?php the_post(); ?>

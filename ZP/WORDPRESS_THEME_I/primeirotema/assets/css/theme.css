@@ -40,7 +40,7 @@ body {
   margin-bottom: 10px;
 }
 
-body:is(.home) .post {
+body:is(.home, .archive) .post {
   display: flex;
 }
 
