@@ -3,6 +3,7 @@
 function nv_theme_styles()
 {
   wp_enqueue_style('booststrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css');
+  wp_enqueue_style('google-titillium', 'http://fonts.googleapis.com/css?family=Titillium+Web:200,300,600');
   wp_enqueue_style('styles', get_template_directory_uri() . '/assets/css/template.css');
 
   wp_enqueue_script('popper', 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js', array('jquery'), wp_rand(), true);
