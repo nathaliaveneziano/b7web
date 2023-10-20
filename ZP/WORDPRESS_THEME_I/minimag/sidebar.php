@@ -1,4 +1,4 @@
-<aside class="col-sm-4">
+<aside class="col-lg-4">
   <?php
   if (is_active_sidebar('nv_sidebar_aside')) {
     dynamic_sidebar('nv_sidebar_aside');

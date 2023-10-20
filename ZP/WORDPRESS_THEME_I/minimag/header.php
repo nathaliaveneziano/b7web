@@ -12,7 +12,12 @@
     <div class="top-header">
       <nav class="navbar navbar-expand-md">
         <div class="container">
-          <div class="collapse navbar-collapse">
+          <div class="navbar-header">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="navbar">
             <?php
             if (has_nav_menu('top')) {
               wp_nav_menu(array(

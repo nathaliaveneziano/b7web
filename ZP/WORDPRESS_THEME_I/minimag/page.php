@@ -3,7 +3,7 @@
 <main>
   <div class="container">
     <div class="row">
-      <section class="col-sm-8 single-page">
+      <section class="col-lg-8 single-page">
         <?php
         if (have_posts()) :
           while (have_posts()) :

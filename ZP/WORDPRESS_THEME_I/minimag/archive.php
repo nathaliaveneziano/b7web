@@ -3,7 +3,7 @@
 <main>
   <div class="container">
     <div class="row">
-      <section class="col-sm-8">
+      <section class="col-lg-8">
         <header class="main-header-title">
           <h1><?php the_archive_title(); ?></h1>
         </header>
