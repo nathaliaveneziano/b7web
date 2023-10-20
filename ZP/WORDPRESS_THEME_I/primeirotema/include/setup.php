@@ -15,6 +15,8 @@ function nv_after_setup_theme()
   // esse código já inclui o codigo acima, não necessitando dele
   register_nav_menu('primary', __('Primary Menu', 'primeirotema'));
   register_nav_menu('footer', __('Footer Menu', 'primeirotema'));
+
+  add_theme_support('post-thumbnails');
 }
 
 function nv_widgets()
