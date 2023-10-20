@@ -55,10 +55,20 @@
               ));
             }
             ?>
+            <div class="search-area">
+              <?php get_search_form(); ?>
+            </div>
           </div>
-          <div class="news">news</div>
+          <div class="main-info">
+            <div class="row">
+              <div class="col-sm-8">...</div>
+              <div class="col-sm-4 social-area">...</div>
+            </div>
+          </div>
         </div>
+        <div class="news">news</div>
       </div>
+    </div>
     </div>
   </header>
   
