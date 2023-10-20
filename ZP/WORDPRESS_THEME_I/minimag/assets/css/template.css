@@ -6,6 +6,11 @@ body.admin-bar {
   margin-top: 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* BOOTSTRAP */
 .navbar {
   padding: 0;
@@ -127,7 +132,40 @@ body.admin-bar {
   height: 100%;
 }
 
+.main-info .random-post {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.main-info .random-post strong {
+  color: #aaa;
+}
+
+.main-info .random-post a {
+  color: #949494;
+  text-decoration: none;
+}
+
 .main-info .social-area {
   background-color: #3b8dbd;
-  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-info .social-area strong {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.main-info .social-area .icons {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  column-gap: 8px;
+  margin: 0;
+}
+
+.main-info .social-area .icons img {
+  height: 20px;
 }

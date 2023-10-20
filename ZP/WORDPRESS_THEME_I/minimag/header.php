@@ -61,14 +61,43 @@
           </div>
           <div class="main-info">
             <div class="row">
-              <div class="col-sm-8">...</div>
-              <div class="col-sm-4 social-area">...</div>
+              <div class="col-sm-8 random-post">
+                <strong>WHAT'S NEW?</strong>
+                <?php
+                $nv_query = new WP_Query(array(
+                  'posts_per_page' => 1,
+                  'post_type' => 'post',
+                  'orderby' => 'rand',
+                  'post_status' => 'publish',
+                ));
+
+                if ($nv_query->have_posts()) :
+                  while ($nv_query->have_posts()) :
+                    $nv_query->the_post();
+                ?>
+                    <a href="<?php the_permalink(); ?>">
+                      <?php the_title(); ?>
+                    </a>
+                <?php
+                  endwhile;
+                  wp_reset_postdata();
+                endif;
+                ?>
+              </div>
+              <div class="col-sm-4 social-area">
+                <strong>FOLLOW:</strong>
+                <ul class="icons">
+                  <li><a href="#"><img src="<?= get_template_directory_uri() . '/assets/images/dribbble.svg'; ?>" alt="Dribbble"></a></li>
+                  <li><a href="#"><img src="<?= get_template_directory_uri() . '/assets/images/facebook.svg'; ?>" alt="Facebook"></a></li>
+                  <li><a href="#"><img src="<?= get_template_directory_uri() . '/assets/images/instagram.svg'; ?>" alt="Instagram"></a></li>
+                  <li><a href="#"><img src="<?= get_template_directory_uri() . '/assets/images/twitter.svg'; ?>" alt="Twitter"></a></li>
+                  <li><a href="#"><img src="<?= get_template_directory_uri() . '/assets/images/youtube.svg'; ?>" alt="Youtube"></a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-        <div class="news">news</div>
       </div>
-    </div>
     </div>
   </header>
   
