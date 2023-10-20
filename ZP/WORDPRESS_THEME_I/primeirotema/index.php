@@ -17,14 +17,18 @@ get_header();
               )); ?>
             </a>
           <?php endif; ?>
+
           <div>
             <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+
             <p>
               <?= get_the_date(); ?> |
               <a href="<?= get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a> |
               <?php the_category(', '); ?>
             </p>
+
             <p><?php the_excerpt(); ?></p>
+
             <p>
               <?php comments_number(); ?> |
               <a href="<?php the_permalink(); ?>">Leia Mais</a>
@@ -33,6 +37,11 @@ get_header();
         </article>
       <?php endwhile; ?>
     <?php endif; ?>
+
+    <div class="pagination">
+      <div class="previous"><?php previous_posts_link(); ?></div>
+      <div class="next"><?php next_posts_link(); ?></div>
+    </div>
   </div>
 
   <?php get_sidebar(); ?>

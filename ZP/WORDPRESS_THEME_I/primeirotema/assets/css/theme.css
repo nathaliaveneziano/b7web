@@ -44,3 +44,13 @@ body {
 .post .post-thumbnail {
   margin-right: 20px;
 }
+
+.pagination {
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  margin-top: 50px;
+}
