@@ -9,8 +9,9 @@ function nv_layout_customizer($wp_customize)
 
   /* SECTIONS */
   $wp_customize->add_section('nv_layout_section', array(
-    'title' => 'Opções de Layout',
     'priority' => 2,
+    'panel' => 'options_theme',
+    'title' => 'Opções de Layout',
   ));
 
   /* CONTROLLERS */

@@ -13,6 +13,7 @@ function nv_social_customizer($wp_customize)
   $wp_customize->add_section('nv_social_section', array(
     'title' => 'Redes Sociais',
     'priority' => '1',
+    'panel' => 'options_theme',
   ));
 
   /* CONTRROLLERS */
