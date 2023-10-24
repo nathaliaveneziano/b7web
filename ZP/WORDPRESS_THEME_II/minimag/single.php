@@ -3,7 +3,7 @@
 <main>
   <div class="container">
     <div class="row">
-      <section class="col-lg-8 single-page">
+      <section id="post-<?php the_ID(); ?>" <?php post_class('col-lg-8 single-page'); ?>>
         <?php
         if (have_posts()) :
           while (have_posts()) :
