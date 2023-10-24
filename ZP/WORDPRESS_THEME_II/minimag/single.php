@@ -18,13 +18,15 @@
               <div class="post-info">
                 <h1 class="post-title"><?php the_title(); ?></h1>
                 <div class="post-data-comment"><?= get_the_date(); ?> | <?php comments_number(); ?></div>
-                <?php
-                if (has_post_thumbnail()) :
-                  the_post_thumbnail('full', array('class' => 'post-thumbnail'));
-                else :
-                  echo '<div class="no-post-thumbnail"></div>';
-                endif;
-                ?>
+                <div class="post-media">
+                  <?php
+                  if (has_post_thumbnail()) :
+                    the_post_thumbnail('full', array('class' => 'post-thumbnail'));
+                  else :
+                    echo '<div class="no-post-thumbnail"></div>';
+                  endif;
+                  ?>
+                </div>
                 <div class="post-description"><?php the_content(); ?></div>
               </div>
             </article>

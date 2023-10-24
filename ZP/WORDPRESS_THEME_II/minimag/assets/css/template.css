@@ -68,6 +68,12 @@ h6 {
   line-height: 20px;
 }
 
+video,
+iframe {
+  width: 100%;
+  height: auto;
+}
+
 /* BOOTSTRAP */
 .navbar {
   padding: 0;
@@ -388,16 +394,16 @@ main .col-lg-8 {
   min-height: 50px;
 }
 
-/* POST - THUMBNAIL */
-.post-info .post-thumbnail {
-  object-fit: cover;
+/* POST - MEDIA */
+.post-media {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
   width: 100%;
-  height: auto;
 }
 
-.single-page .post-info .post-thumbnail {
-  width: 100%;
-  height: auto;
+.single-page .post-media {
+  margin: 3% 0;
 }
 
 .post-info .no-post-thumbnail {
@@ -406,13 +412,15 @@ main .col-lg-8 {
   background-size: 150px 150px;
   background-repeat: no-repeat;
   background-position: center center;
-  width: 100%;
-  height: 245px;
 }
-
-.single-page .post-info .post-thumbnail,
-.single-page .post-info .no-post-thumbnail {
-  margin: 3% 0;
+.post-info .no-post-thumbnail,
+.post-info .post-thumbnail,
+.post-info iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* POST - DATE e DATE E COMMENTS */
@@ -434,13 +442,13 @@ main .col-lg-8 {
   font-weight: 600;
 }
 
-.single-page .post-info .post-title {
-  font-size: 32px;
-}
-
 /* POST - DESCRIPTION */
 .post-info .post-description {
   color: #bbb;
+}
+
+.single-page .post-info .post-description {
+  margin-top: 3%;
 }
 
 /* PAGINATION */
@@ -597,6 +605,13 @@ aside .widget .widget_title {
 .footer-widgets .widget {
   width: 100%;
   padding: 20px;
+}
+
+.footer-widgets figure {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
 }
 
 .footer-credits {
