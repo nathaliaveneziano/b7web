@@ -75,24 +75,33 @@
               <div class="col-sm-8 random-post">
                 <strong>WHAT'S NEW?</strong>
                 <?php
-                $nv_query = new WP_Query(array(
-                  'posts_per_page'  => 1,
-                  'post_type'       => 'post',
-                  'orderby'         => 'rand',
-                  'post_status'     => 'publish',
-                ));
+                if (function_exists('wpp_get_mostpopular')) {
+                  wpp_get_mostpopular(array(
+                    'limit' => 1,
+                    'wpp_start' => '',
+                    'wpp_end' => '',
+                    'post_html' => '<a href="{url}">{text_title}</a>',
+                  ));
+                } else {
+                  $nv_query = new WP_Query(array(
+                    'posts_per_page'  => 1,
+                    'post_type'       => 'post',
+                    'orderby'         => 'rand',
+                    'post_status'     => 'publish',
+                  ));
 
-                if ($nv_query->have_posts()) :
-                  while ($nv_query->have_posts()) :
-                    $nv_query->the_post();
+                  if ($nv_query->have_posts()) :
+                    while ($nv_query->have_posts()) :
+                      $nv_query->the_post();
                 ?>
-                    <a href="<?php the_permalink(); ?>">
-                      <?php the_title(); ?>
-                    </a>
+                      <a href="<?php the_permalink(); ?>">
+                        <?php the_title(); ?>
+                      </a>
                 <?php
-                  endwhile;
-                  wp_reset_postdata();
-                endif;
+                    endwhile;
+                    wp_reset_postdata();
+                  endif;
+                }
                 ?>
               </div>
               <div class="col-sm-4 social-area">
