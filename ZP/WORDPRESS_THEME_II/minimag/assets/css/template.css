@@ -363,6 +363,10 @@ main .col-lg-8 {
   position: relative;
 }
 
+.post-item.sticky {
+  width: 100%;
+}
+
 .single-page .post-item {
   border-bottom: none;
 }

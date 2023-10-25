@@ -1,4 +1,4 @@
-<article class="post-item">
+<article <?php post_class('post-item'); ?>>
   <a href="<?php the_permalink(); ?>">
     <div class="post-comment-area">
       <span><?php comments_number('0', '1', '%'); ?></span>
