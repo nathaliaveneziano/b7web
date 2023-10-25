@@ -18,6 +18,34 @@ function nv_afterr_setup()
   add_theme_support('custom-logo');
   add_theme_support('post-formats', array('video', 'audio'));
 
+  add_theme_support('custom-header', array(
+    'defaul-image'  => get_template_directory_uri() . '/assets/images/headers/header-01.jpg',
+    'width'         => 1920,
+    'height'        => 400,
+    'flex-width'    => true,
+    'flex-height'   => true,
+    // 'header-text'   => false,
+    // 'uploads'       => false,
+  ));
+
+  register_default_headers(array(
+    'header-01' => array(
+      'url'           => get_template_directory_uri() . '/assets/images/headers/header-01.jpg',
+      'thumbnail_url' => get_template_directory_uri() . '/assets/images/headers/header-01.jpg',
+      'description'   => 'Header 01',
+    ),
+    'header-02' => array(
+      'url'           => get_template_directory_uri() . '/assets/images/headers/header-02.jpg',
+      'thumbnail_url' => get_template_directory_uri() . '/assets/images/headers/header-02.jpg',
+      'description'   => 'Header 02',
+    ),
+    'header-03' => array(
+      'url'           => get_template_directory_uri() . '/assets/images/headers/header-03.jpg',
+      'thumbnail_url' => get_template_directory_uri() . '/assets/images/headers/header-03.jpg',
+      'description'   => 'Header 03',
+    ),
+  ));
+
   register_nav_menu('primary', __('Menu Principal', 'minimag'));
   register_nav_menu('top', __('Menu Superior', 'minimag'));
 }
