@@ -8,7 +8,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <header>
+  <header class="header">
     <?php if (get_theme_mod('nv_topmenu_show')) : ?>
       <div class="top-header">
         <nav class="navbar navbar-expand-md">

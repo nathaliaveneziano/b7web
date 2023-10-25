@@ -1,0 +1,14 @@
+@media print {
+  .header,
+  .pagination,
+  .comments-area,
+  aside,
+  footer {
+    display: none;
+  }
+
+  .container,
+  .container-fluid {
+    max-width: 100%;
+  }
+}
