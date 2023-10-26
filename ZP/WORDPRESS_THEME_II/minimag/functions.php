@@ -1,5 +1,6 @@
 <?php
 // Include
+require get_template_directory() . '/include/ajax.php';
 require get_template_directory() . '/include/setup.php';
 require get_template_directory() . '/include/admin-functions.php';
 require get_template_directory() . '/include/customizer/theme-customizer.php';

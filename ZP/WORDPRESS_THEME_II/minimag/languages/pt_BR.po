@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MiniMag\n"
-"POT-Creation-Date: 2023-10-26 17:26-0300\n"
-"PO-Revision-Date: 2023-10-26 17:27-0300\n"
+"POT-Creation-Date: 2023-10-26 18:00-0300\n"
+"PO-Revision-Date: 2023-10-26 18:00-0300\n"
 "Last-Translator: \n"
 "Language-Team: Nathália Veneziano\n"
 "Language: pt_BR\n"
@@ -111,6 +111,10 @@ msgstr "Barra Lateral"
 #: include/setup.php:69 include/setup.php:71
 msgid "Footer Bar"
 msgstr "Barra de Rodapé"
+
+#: index.php:19
+msgid "Load More"
+msgstr "Carregar Mais"
 
 #: search.php:8
 msgid "Search: "
