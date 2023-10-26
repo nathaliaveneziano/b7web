@@ -1,0 +1,141 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MiniMag\n"
+"POT-Creation-Date: 2023-10-26 17:26-0300\n"
+"PO-Revision-Date: 2023-10-26 17:27-0300\n"
+"Last-Translator: \n"
+"Language-Team: Nathália Veneziano\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: comments.php:4
+msgid "Please do not load this page directly. Thanks!"
+msgstr "Por favor, não carregue esta página diretamente. Obrigado!"
+
+#: comments.php:7
+msgid "This article is password protected. Enter it to see comments."
+msgstr "Este artigo está protegido por password. Insira-a para ver os comentários."
+
+#: comments.php:16
+msgid "0 comment"
+msgstr "0 comentário"
+
+#: comments.php:17
+msgid "1 comment"
+msgstr "1 comentário"
+
+#: comments.php:18
+#, no-php-format
+msgid "%  comments"
+msgstr "% comentários"
+
+#: comments.php:20
+msgid "Leave Your Comments"
+msgstr "Deixe seus comentários"
+
+#: comments.php:35
+msgid "Pagination"
+msgstr "Paginação"
+
+#: comments.php:36
+msgid "Previous"
+msgstr "Anterior"
+
+#: comments.php:37
+msgid "Next"
+msgstr "Próximo"
+
+#: comments.php:44
+msgid "Name"
+msgstr "Nome"
+
+#: comments.php:48
+msgid "Comment"
+msgstr "Comentário"
+
+#: comments.php:50
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Deixe uma resposta para %s"
+
+#: comments.php:51
+msgid "Post a comment"
+msgstr "Postar um comentário"
+
+#: comments.php:56
+msgid "Comments are closed."
+msgstr "Os comentários estão fechados."
+
+#: footer.php:11
+msgid "All Rights Reserved"
+msgstr "Todos os direitos reservados"
+
+#: footer.php:13
+msgid "Privacy Policy"
+msgstr "Política de Privacidade"
+
+#: footer.php:16
+msgid "Created by XYZ"
+msgstr "Criado por XYZ"
+
+#: header.php:76
+msgid "WHAT'S NEW?"
+msgstr "O QUE HÁ DE NOVO?"
+
+#: header.php:108
+msgid "FOLLOW:"
+msgstr "SEGUIR:"
+
+#: include/customizer/theme-customizer.php:13
+msgid "Theme options"
+msgstr "Opções do tema"
+
+#: include/setup.php:50
+msgid "Main menu"
+msgstr "Menu Principal"
+
+#: include/setup.php:51
+msgid "Top Menu"
+msgstr "Menu Superior"
+
+#: include/setup.php:59 include/setup.php:61
+msgid "Sidebar"
+msgstr "Barra Lateral"
+
+#: include/setup.php:69 include/setup.php:71
+msgid "Footer Bar"
+msgstr "Barra de Rodapé"
+
+#: search.php:8
+msgid "Search: "
+msgstr "Procurar: "
+
+#: searchform.php:2
+msgid "Search Here"
+msgstr "Procure aqui"
+
+#: searchform.php:3
+msgid "Search"
+msgstr "Procurar"
+
+#: single.php:14
+msgid "Previous Post"
+msgstr "Postagem Anterior"
+
+#: single.php:15
+msgid "Next Post"
+msgstr "Próxima Postagem"
+
+#, fuzzy
+#~| msgid "FOLLOW:"
+#~ msgid "FOLLOW"
+#~ msgstr "SEGUIR:"
+
+#~ msgid "Opções do tema"
+#~ msgstr "Opções do tema"

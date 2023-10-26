@@ -47,16 +47,18 @@ function nv_afterr_setup()
     ),
   ));
 
-  register_nav_menu('primary', __('Menu Principal', 'minimag'));
-  register_nav_menu('top', __('Menu Superior', 'minimag'));
+  register_nav_menu('primary', __('Main menu', 'minimag'));
+  register_nav_menu('top', __('Top Menu', 'minimag'));
+
+  load_theme_textdomain('minimag', get_template_directory() . '/languages');
 }
 
 function nv_widgets()
 {
   register_sidebar(array(
-    'name' => __('Sidebar Lateral', 'minimag'),
+    'name' => __('Sidebar', 'minimag'),
     'id' => 'nv_sidebar_aside',
-    'description' => __('Sidebar Lateral', 'minimag'),
+    'description' => __('Sidebar', 'minimag'),
     'before_widget' => '<div id="%1$s" class="widget %2$s">',
     'after_widget' => '</div>',
     'before_title' => '<h4 class="widget_title">',
@@ -64,9 +66,9 @@ function nv_widgets()
   ));
 
   register_sidebar(array(
-    'name' => __('Sidebar Rodapé', 'minimag'),
+    'name' => __('Footer Bar', 'minimag'),
     'id' => 'nv_sidebar_footer',
-    'description' => __('Sidebar Rodapé', 'minimag'),
+    'description' => __('Footer Bar', 'minimag'),
     'before_widget' => '<div id="%1$s" class="widget %2$s">',
     'after_widget' => '</div>',
     'before_title' => '<h4 class="widget_title">',

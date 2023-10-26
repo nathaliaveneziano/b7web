@@ -73,7 +73,7 @@
           <div class="main-info">
             <div class="row">
               <div class="col-sm-8 random-post">
-                <strong>WHAT'S NEW?</strong>
+                <strong><?= __('WHAT\'S NEW?', 'minimag'); ?></strong>
                 <?php
                 if (function_exists('wpp_get_mostpopular')) {
                   wpp_get_mostpopular(array(
@@ -105,7 +105,7 @@
                 ?>
               </div>
               <div class="col-sm-4 social-area">
-                <strong>FOLLOW:</strong>
+                <strong><?= __('FOLLOW:', 'minimag'); ?></strong>
                 <ul class="icons">
                   <?php if (get_theme_mod('nv_social_dribbble')) : ?>
                     <li><a href="<?= get_theme_mod('nv_social_dribbble'); ?>"><img src="<?= get_template_directory_uri() . '/assets/images/dribbble.svg'; ?>" alt="Dribbble"></a></li>

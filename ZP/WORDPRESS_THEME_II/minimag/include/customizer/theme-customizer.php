@@ -10,7 +10,7 @@ function nv_customize_register($wp_customize)
   $wp_customize->get_section('custom_css')->description = '';
 
   $wp_customize->add_panel('options_theme', array(
-    'title' => __('Opções do tema', 'minimage'),
+    'title' => __('Theme options', 'minimage'),
     'priority' => 1,
   ));
 

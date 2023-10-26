@@ -11,8 +11,8 @@
         ?>
 
             <div class="pagination">
-              <?php previous_post_link('%link', '<span class="prev">Previous Story</span>%title'); ?>
-              <?php next_post_link('%link', '<span class="next">Next Story</span>%title'); ?>
+              <?php previous_post_link('%link', '<span class="prev">' . __('Previous Post', 'minimag') . '</span>%title'); ?>
+              <?php next_post_link('%link', '<span class="next">' . __('Next Post', 'minimag') . '</span>%title'); ?>
             </div>
             <article class="post-item">
               <div class="post-info">
