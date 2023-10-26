@@ -17,9 +17,18 @@
             endwhile;
           endif;
           ?>
-          <div class="pagination">
-            <div class="previous"><?php previous_posts_link(); ?></div>
-            <div class="next"><?php next_posts_link(); ?></div>
+          <div class="pagination_numbers">
+            <?php
+            global $wp_query;
+            echo paginate_links(array(
+              'current' => max(1, get_query_var('paged')),
+              'total' => $wp_query->max_num_pages,
+              'show_all' => true,
+              'end_size' => 1,
+              'mid_size' => 2,
+              'prev_next' => false,
+            ));
+            ?>
           </div>
       </section>
       <?php get_sidebar(); ?>
