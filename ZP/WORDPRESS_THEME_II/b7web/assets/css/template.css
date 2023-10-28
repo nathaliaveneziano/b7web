@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+.top_header {
+  border-top: 5px solid #2d3a64;
+}
