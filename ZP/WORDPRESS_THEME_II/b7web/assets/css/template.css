@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* HEADER */
+.top_header {
+  border-top: 5px solid #2d3a64;
+}
+
+.custom-logo {
+  width: auto;
+  height: 60px;
+  margin: 20px 0;
+}
+
+/* BANNER */
+.banner {
+  background-image: url('../images/bg.jpg');
+  background-position: center;
+  height: 300px;
+}
+
+.hero-image {
+  height: 285px;
+  margin-top: 15px;
+}
