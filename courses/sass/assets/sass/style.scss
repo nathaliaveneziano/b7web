@@ -23,29 +23,30 @@ nav {
   }
 }
 
-%fundamento-msg {
-  padding: 10px;
-  font-size: 24px;
-  border: 2px solid #ccc;
-  margin: auto;
-  max-width: 500px;
-  margin-top: 10px;
+%item {
+  background-color: #000;
+  height: 40px;
+  margin-bottom: 5px;
 }
 
-.msg-info {
-  @extend %fundamento-msg;
-  border-color: #00f;
-  color: #00f;
+$item-width: 248px;
+
+.item {
+  @extend %item;
+  width: $item-width;
 }
 
-.msg-aviso {
-  @extend %fundamento-msg;
-  border-color: #f00;
-  color: #f00;
+.item-duplo {
+  @extend %item;
+  width: $item-width * 2;
 }
 
-.msg-sucesso {
-  @extend %fundamento-msg;
-  border-color: #0f0;
-  color: #0f0;
+.item-metade {
+  @extend %item;
+  width: calc($item-width / 2);
+}
+
+.item-triplo {
+  @extend %item;
+  width: $item-width * 3;
 }
