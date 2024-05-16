@@ -1,23 +1,22 @@
-$cor-fundo: #eee;
-$cor-fonte: #333;
-$borda-padrao: 2px;
-$fundo-padrao: #ccc;
+nav {
+  background-color: #eee;
+  height: 100px;
 
-body {
-  background-color: $cor-fundo;
-  color: $cor-fonte;
-}
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 
-.quadrado {
-  width: 200px;
-  height: 200px;
-  border: $borda-padrao solid #000;
-  background-color: $fundo-padrao;
-}
+  li {
+    display: inline-block;
 
-.retangulo {
-  width: 300px;
-  height: 200px;
-  border: $borda-padrao solid #000;
-  background-color: $fundo-padrao;
+    a {
+      display: block;
+      background-color: #ccc;
+      padding: 10px;
+      text-decoration: none;
+      color: #000;
+    }
+  }
 }
