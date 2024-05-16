@@ -1,12 +1,5 @@
 @import 'reset';
 
-@mixin girar($graus) {
-  transform: rotate($graus);
-  -webkit-transform: rotate($graus);
-  -moz-transform: rotate($graus);
-  -ms-transform: rotate($graus);
-}
-
 nav {
   background-color: #eee;
   height: 100px;
@@ -19,7 +12,6 @@ nav {
 
   li {
     display: inline-block;
-    @include girar(30deg);
 
     a {
       display: block;
@@ -29,4 +21,31 @@ nav {
       color: #000;
     }
   }
+}
+
+%fundamento-msg {
+  padding: 10px;
+  font-size: 24px;
+  border: 2px solid #ccc;
+  margin: auto;
+  max-width: 500px;
+  margin-top: 10px;
+}
+
+.msg-info {
+  @extend %fundamento-msg;
+  border-color: #00f;
+  color: #00f;
+}
+
+.msg-aviso {
+  @extend %fundamento-msg;
+  border-color: #f00;
+  color: #f00;
+}
+
+.msg-sucesso {
+  @extend %fundamento-msg;
+  border-color: #0f0;
+  color: #0f0;
 }
